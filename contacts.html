@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="(orientation: portrait) and (max-width: 479px)" href="mobile.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="headerText"> Домашние рецепты </a>
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="./recipes/Kabachki.html"> Оладьи из кабачков</a></li>
+                <li><a class="menu__item" href="./recipes/pomodoro.html">Фаршированные помидорки</a></li>
+                <li><a class="menu__item" href="#">Разное</a></li>
+                <li><a class="menu__item" href="#">Обратная связь</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h2>Форма обратной связи</h2>
+        <form action="">
+            <FIeldset>
+                <p>Имя <em>*</em><br>
+                    <input type="text" id="name" placeholder="Введите Ваше имя">
+                </p>
+                <p>E-mail <em>*</em><br>
+                    <input type="email" id="email" placeholder="Введите Ваш Email">
+                </p>
+                <p>Возраст<em>*</em><br>
+                    <input type="radio" name="answer" value="Less than 18" id="lessThan18"><label
+                        for="lessThan18">Меньше
+                        18</label> <br>
+                    <input type="radio" name="answer" value="19-30" id="19-30"><label for="19-30">19-30</label> <br>
+                    <input type="radio" name="answer" value="31-45" id="31-45"><label for="31-45">31-45</label> <br>
+                    <input type="radio" name="answer" value="45-55" id="45-55"><label for="45-55">45-55</label> <br>
+                    <input type="radio" name="answer" value="55+" id="55+"><label for="55+">55+</label> <br>
+                </p>
+                <p>Интересы <br>
+                    <input type="checkbox" name="firstCourse" value="firstCourse" id="firstCourse"><label
+                        for="firstCourse"> Первые блюда
+                    </label><br>
+                    <input type="checkbox" name="secondCourse" value="secondCourse" id="secondCourse"><label
+                        for="secondCourse"> Вторые блюда
+                    </label><br>
+                    <input type="checkbox" name="baking" value="baking" id="baking"><label for="baking"> Выпечка,
+                        сладкое </label><br>
+                </p>
+                <p>Ваши предложения (Ваш рецепт)<br>
+                    <textarea name="proposals" id="proposals" cols="40" rows="4"
+                        placeholder="Введите Ваши предложения или введите Ваш рецепт"></textarea>
+                </p>
+                <p> <input type="submit" value="ОТПРАВИТЬ" class="contactsButton">
+                    <input type="reset" value="ОЧИСТИТЬ" class="contactsButton">
+                </p>
+            </FIeldset>
+        </form>
+    </main>
+    <footer>
+        <p>Developed by Iurina Ana <br>
+            2022 </p>
+    </footer>
+</body>
+
+</html>

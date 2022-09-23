@@ -1,0 +1,50 @@
+@media (orientation: portrait) and (max-width: 479px) {
+
+    h2 {
+        margin-top: 46px;
+    }
+
+    h3 {
+        font-size: 36px;
+        margin: 8px 8px 0 8px;
+    }
+
+    article {
+        padding: 0 8px;
+    }
+
+ul.listOfIngredients {
+    margin-top: 0;
+    font-size: larger;
+}
+
+    .listOfIngredients>li {
+        border-bottom: 1px solid white;
+    }
+
+    /*Header*/
+    header {
+        font-size: 36px;
+    }
+
+    .headerText {
+        padding-left: 8px;
+    }
+
+    /*Main page */
+    section>h1 {
+        font-size: 78px;
+    }
+
+    .homeMain {
+        margin: 0 8px 16px;
+    }
+
+    /*Page Оладьи из кабачков*/
+    .figureRecipesImg {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+}

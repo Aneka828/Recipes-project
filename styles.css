@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+body,
+html {
+    background-color: #f2f2f2;
+    font-family: 'Caveat', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 51px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    box-shadow: inset 10px 5px 15px #ebe1df;
+}
+
+main {
+    font-size: 24px;
+}
+
+main>h2 {
+    background-color: #ebe1df;
+    box-shadow: 1px 1px 15px grey;
+    font-size: 40px;
+}
+
+/* Header*/
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background: rgba(236, 226, 224, 0.40);
+    color: #333;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.headerText{
+    padding-left: 20px;
+}
+
+header>a {
+    color: black;
+}
+
+.hamburger-menu {
+    top: 0;
+    right: 0;
+}
+
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    width: auto;
+    margin: 0;
+    padding: 48px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: 1px 5px 15px gray;
+    border-radius: 5%;
+    transform: translate(100%, 0);
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 3px solid #ebe1df;
+}
+
+.menu__item:hover {
+    background-color: #f2f2f2;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    right: 0;
+    transform: none;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    transition-duration: .25s;
+}
+
+.menu__box {
+    transition-duration: .25s;
+}
+
+/* Home section*/
+.homeSection {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #f2f2f2 url(img/salad.jpg) no-repeat center;
+    background-size: cover;
+    box-shadow: 1px 5px 15px grey;
+}
+
+section>h1 {
+    position: absolute;
+    top: 33vh;
+    width: 100%;
+    font-size: 88px;
+    text-align: center;
+    color: #f2f2f2;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+/*Home main*/
+.homeMain {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 16px;
+}
+
+/*Page Оладьи из кабачков*/
+.figureRecipesImg {
+    height: 445px;
+    box-shadow: 10px 5px 15px gray;
+}
+
+.figureRecipes {
+    text-align: center;
+}
+
+/*Page Фаршированные помидорки*/
+.photoOfPomodoro {
+    text-align: center;
+}
+
+.pomodoro1 {
+    box-shadow: 10px 5px 15px gray;
+
+}
+
+.photoOfPomodoroDescription {
+    margin: 0;
+}
+
+.sourcesPhoto,
+.sourcesPhoto p {
+    font-style: italic;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+/*Contacts*/
+fieldset {
+    border-radius: 2%;
+    width: 33%;
+    margin: 0 auto;
+    box-shadow: 10px 5px 15px gray;
+}
+
+fieldset>p {
+    margin: 5px 0px 5px 5px;
+}
+
+em {
+    color: red;
+}
+
+.contactsButton {
+    border-radius: 8px;
+    background-color: #ebe1df;
+    border: 2px solid rgb(58, 57, 57);
+    box-shadow: 3px 2px 3px #817d7d8a;
+    font-family: Georgia, serif;
+}
+
+.contactsButton:hover {
+    background-color: #eda71d;
+    cursor: pointer;
+}
+
+/* на странице обратной связи footer взлетает вверх, хотя везде стили одинаково прописаны, как исправить?*/
+
+/*Footer*/
+footer {
+    background-color: #ebe1df;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 1px 5px 15px grey;
+}
+
+footer>p {
+    font-size: 24px;
+    margin: 12px;
+}
